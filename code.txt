@@ -1,0 +1,25 @@
+class Solution{
+    public:
+    //Function to return the count of number of elements in union of two arrays.
+    int doUnion(int a[], int n, int b[], int m)  {
+    unordered_map<int,int>map;
+     for(int i=0;i<n;i++)
+     
+     {
+         if(map.find(a[i])==map.end())
+         {
+             map[a[i]]=1;
+         }
+     }
+          for(int i=0;i<m;i++)
+     
+     {
+         if(map.find(b[i])==map.end())
+         {
+             map[b[i]]=1;
+         }
+     }
+     int ans=map.size();
+     return ans;
+    }
+};
